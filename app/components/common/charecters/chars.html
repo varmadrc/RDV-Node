@@ -1,0 +1,11 @@
+<br> <br><b>Heroes</b><br>
+
+<ul>
+	<li ng-repeat="hero in $ctrl.list" ng-show="hero.location" ng-click="$ctrl.deleteHero(hero)"><b>{{hero.name}}</b>, {{hero.location}}.</li>
+</ul>
+
+<br> <br><b>Matters</b><br>
+
+<ul>
+	<li ng-repeat="hero in $ctrl.list2 | orderBy : 'name'"><b>{{hero.name}}</b></li>
+</ul>

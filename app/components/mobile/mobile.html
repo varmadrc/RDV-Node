@@ -1,0 +1,11 @@
+<ul>
+	<li ng-repeat="mobile in $ctrl.list"><b>{{mobile.Brand}} {{mobile.Model}}</b></li>
+</ul>
+
+<br/>
+<br/>
+<div class="card">
+	<select class="form-control" ng-options="item as item.Model for item in $ctrl.list" ng-model="$ctrl.selectedMobile " ng-change="$ctrl.selected()">
+		<option value="">Choose Mobile</option>
+	</select>
+</div>

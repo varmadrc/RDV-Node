@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<title>angularPOC</title>
+	<!-- loading assets -->
+	<script type="text/javascript" src="assets/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="assets/angular.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<script type="text/javascript" src="assets/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<!-- CDN for angular material 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>-->
+	<!-- loading main angularJs module -->
+	<script type="text/javascript" src="app/app.js"></script>
+	<script type="text/javascript" src="app/components/common/charecters/chars.component.js"></script>
+	<script type="text/javascript" src="app/services/chars.service.js"></script>
+	<script type="text/javascript" src="app/components/mobile/mobile.component.js"></script>
+	<script type="text/javascript" src="app/services/mobile.service.js"></script>
+	<style type="text/css" media="screen">
+		html {
+		  overflow-y: scroll;
+		}
+		::-webkit-scrollbar {
+			width: 10px;
+			background-color: white;
+		}
+		::-webkit-scrollbar-thumb {
+			border-radius: 10px;
+			background-color: white;
+		}
+		::-webkit-scrollbar-thumb:hover {
+			border-radius: 10px;
+			background-color: #D62929;
+		}
+
+		::-webkit-scrollbar-track {
+			border-radius: 10px;
+			background-color: white;
+		}
+	</style>
+</head>
+<body>
+	<header class="text-center">
+		<h2 class="text-bold" >Welcome</h2>
+	</header><!-- /header -->
+
+	<div class="container">
+		
+		<nav>
+			<ul class="nav nav-tabs">
+				<li><a data-toggle="tab" href="#homeTab" title="" class="active">Home</a></li>
+				<li><a data-toggle="tab" href="#charTab" title="">Charecters</a></li>
+				<!--<li><a data-toggle="tab" href="#matters" title="">Matters</a></li>-->
+				<li><a data-toggle="tab" href="#mobilesTab" title="">Mobiles</a></li>
+			</ul>
+		</nav>
+		<div class="tab-content">
+			<div id="homeTab" class="tab-pane fade in active">
+				<br/><br/>
+				Sample angularJs app
+			</div>
+			<char-list id="charTab" class="tab-pane fade">Loading Charecters
+			</char-list>
+			<div id="mobilesTab" class="tab-pane fade">
+				<br/><br/>
+				<h3>Mobiles</h3>
+				<mobiles>Loading mobiles</mobiles>
+			</div>
+		</div>
+	</div>
+	<footer>
+		
+	</footer>
+</body>
+</html>
