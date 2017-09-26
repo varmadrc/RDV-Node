@@ -5,7 +5,10 @@
 <br/>
 <br/>
 <div class="card">
-	<select class="form-control" ng-options="item as item.Model for item in $ctrl.list" ng-model="$ctrl.selectedMobile " ng-change="$ctrl.selected()">
+	<select class="form-control" ng-options="item as item.Model for item in $ctrl.list" ng-model="$ctrl.selectedMobile" ng-change="$ctrl.selected()">
 		<option value="">Choose Mobile</option>
 	</select>
+	<mobile-details mobile="$ctrl.selectedMobile">
+		Loading.. Mobile details
+	</mobile-details>
 </div>
